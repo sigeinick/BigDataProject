@@ -1,5 +1,6 @@
 package edu.umkc.anonymous.cs5542project;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
@@ -36,6 +37,7 @@ import okhttp3.Response;
 public class ImageClassificationActivity extends AppCompatActivity {
 
     TextView outputTextView;
+    ImageView image;
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -44,21 +46,37 @@ public class ImageClassificationActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Bitmap photoImage;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_image_classification);
         outputTextView = (TextView) findViewById(R.id.text_output);
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client2 = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
+        image = (ImageView) findViewById(R.id.image_to_analyze);
+
+        Intent intent = getIntent();
+        photoImage = intent.getParcelableExtra("Image");
+        if (photoImage != null) {
+            image.setImageBitmap(photoImage);
+        } else {
+            image.setImageResource(R.drawable.bonsai1);
+        }
     }
 
     public void onClickClarifai(View v) {
 
     }
 
+    public void onClickPhoto(View v) {
+        Intent redirect = new Intent(ImageClassificationActivity.this, PhotoActivity.class);
+        startActivity(redirect);
+
+    }
+
     public void onClickSpark(View v) {
-        String url = "http://CHANGE_TO_YOUR_IP/get_custom";
-        ImageView image = (ImageView) findViewById(R.id.image_to_analyze);
+        String url = "http://192.168.1.195:8080/get_custom";
+        //ImageView image = (ImageView) findViewById(R.id.image_to_analyze);
 
         BitmapDrawable bitmapDrawable = ((BitmapDrawable) image.getDrawable());
         Bitmap bitmap = bitmapDrawable.getBitmap();
@@ -146,4 +164,6 @@ public class ImageClassificationActivity extends AppCompatActivity {
         AppIndex.AppIndexApi.end(client2, getIndexApiAction());
         client2.disconnect();
     }
+
+
 }
