@@ -2,8 +2,9 @@
 ## Kansas City Fountain Monument Identifier 
 
 ### > Proposal
-<a href="https://github.com/datarocksAmy/BigDataProject/blob/master/Documentation/CS%205542%20Team%20%232%20Proposal%20.pdf">https://github.com/datarocksAmy/BigDataProject/blob/master/Documentation/CS%205542%20Team%20%232%20Proposal%20.pdf</a>
-<br>
+> Documentation:
+https://github.com/datarocksAmy/BigDataProject/blob/master/Project%20Proposal/CS%205542%20Team%20%232%20Proposal%20.pdf
+
 ### > Project Report 1
 <a href="https://github.com/datarocksAmy/BigDataProject/blob/master/Documentation/CS%205542%20Team%20%232%20Report%201.pdf">https://github.com/datarocksAmy/BigDataProject/blob/master/Documentation/CS%205542%20Team%20%232%20Report%201.pdf</a>
 <br>
