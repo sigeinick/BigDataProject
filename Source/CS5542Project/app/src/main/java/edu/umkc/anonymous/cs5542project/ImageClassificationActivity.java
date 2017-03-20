@@ -2,8 +2,10 @@ package edu.umkc.anonymous.cs5542project;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
+import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Base64;
@@ -23,7 +25,18 @@ import org.json.JSONObject;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.List;
+
+import clarifai2.api.ClarifaiBuilder;
+import clarifai2.api.ClarifaiClient;
+import clarifai2.api.ClarifaiResponse;
+import clarifai2.dto.input.ClarifaiInput;
+import clarifai2.dto.input.image.ClarifaiImage;
+import clarifai2.dto.model.output.ClarifaiOutput;
+import clarifai2.dto.prediction.Concept;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -65,8 +78,41 @@ public class ImageClassificationActivity extends AppCompatActivity {
     }
 
     public void onClickClarifai(View v) {
+        final ClarifaiClient client = new ClarifaiBuilder("gkRbcRqTrqFxXIWg8oWqZf8FpnkHLXw81V_skWzY", "TsqyYSMhocLidZ1s-Q-wtFVmWEnP4PAt8p9O1iSI")
+                .client(new OkHttpClient()).buildSync();
 
+        Bitmap bm = BitmapFactory.decodeResource(getResources(), R.drawable.bonsai1);
+
+        File dir = new File(Environment.getExternalStorageDirectory() + File.separator + "drawable");
+        boolean doSave = true;
+        if (!dir.exists()) {
+            doSave = dir.mkdirs();
+        }
+
+        if (doSave) {
+            saveBitmapToFile(dir,"bonsai.png",bm,Bitmap.CompressFormat.PNG,100);
+        }
+        else {
+            Log.e("app","Couldn't create target directory.");
+        }
+
+        try {
+            ClarifaiResponse response = client.getDefaultModels().generalModel().predict()
+                    .withInputs(ClarifaiInput.forImage(ClarifaiImage.of(new File(dir, "bonsai.png"))))
+                    .executeSync();
+
+            List<ClarifaiOutput<Concept>> predictions = (List<ClarifaiOutput<Concept>>) response.get();
+            String output = "Image contains ";
+            List<Concept> data = predictions.get(0).data();
+            for (int i = 0; i < data.size(); i++) {
+                output += data.get(i).name() + " ";
+            }
+            outputTextView.setText(output);
+        } catch (Exception e) {
+            outputTextView.setText(e.getMessage());
+        }
     }
+
 
     public void onClickPhoto(View v) {
         Intent redirect = new Intent(ImageClassificationActivity.this, PhotoActivity.class);
@@ -143,6 +189,31 @@ public class ImageClassificationActivity extends AppCompatActivity {
                 .setObject(object)
                 .setActionStatus(Action.STATUS_TYPE_COMPLETED)
                 .build();
+    }
+
+    public boolean saveBitmapToFile(File dir, String filename, Bitmap bm, Bitmap.CompressFormat format, int quality) {
+        File imageFile = new File(dir, filename);
+        FileOutputStream fos = null;
+        try {
+            fos = new FileOutputStream(imageFile);
+
+            bm.compress(format,quality,fos);
+
+            fos.close();
+
+            return true;
+        }
+        catch (IOException e) {
+            Log.e("app",e.getMessage());
+            if (fos != null) {
+                try {
+                    fos.close();
+                } catch (IOException e1) {
+                    e1.printStackTrace();
+                }
+            }
+        }
+        return false;
     }
 
     @Override

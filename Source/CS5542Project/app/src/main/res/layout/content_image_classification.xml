@@ -46,7 +46,8 @@
         android:id="@+id/btn_clarifai"
         android:layout_alignBaseline="@+id/brn_spark"
         android:layout_alignBottom="@+id/brn_spark"
-        android:layout_alignStart="@+id/image_to_analyze" />
+        android:layout_alignStart="@+id/image_to_analyze"
+        android:onClick="onClickClarifai"/>
 
     <Button
         android:text="SPARK"
