@@ -8,5 +8,5 @@ object IPSettings {
   val KMEANS_PATH = PATH + "model/clusters"
   val KMEANS_CENTERS_PATH = PATH + "model/clusterCenters"
   val HISTOGRAM_PATH = PATH + "model/histograms"
-  val RANDOM_FOREST_PATH = PATH + "model/nbmodel"
+  val DECISION_TREE_PATH = PATH + "model/dtmodel"
 }

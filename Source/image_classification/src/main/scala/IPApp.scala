@@ -3,13 +3,13 @@
 import java.nio.file.{Files, Paths}
 
 import org.apache.spark.mllib.clustering.{KMeans, KMeansModel}
-import org.apache.spark.mllib.tree.model.RandomForestModel
+import org.apache.spark.mllib.tree.model.{DecisionTreeModel, RandomForestModel}
 import org.apache.spark.streaming.{Seconds, StreamingContext}
 import org.apache.spark.{SparkConf, SparkContext}
 
 
 object IPApp {
-  val IMAGE_CATEGORIES = List("airplanes", "bonsai", "buddha")
+  val IMAGE_CATEGORIES = List("children", "muse", "nichols")
 
   /**
     * @note Test method for classification on Spark
@@ -26,8 +26,8 @@ object IPApp {
     println("-- Histogram size : " + histogram.size)
     println(histogram.toArray.mkString(" "))
 
-    val nbModel = RandomForestModel.load(sc, IPSettings.RANDOM_FOREST_PATH)
-    val p = nbModel.predict(histogram)
+    val dtModel = DecisionTreeModel.load(sc, IPSettings.DECISION_TREE_PATH)
+    val p = dtModel.predict(histogram)
     (s"Test image predicted as : " + IMAGE_CATEGORIES(p.toInt))
   }
 

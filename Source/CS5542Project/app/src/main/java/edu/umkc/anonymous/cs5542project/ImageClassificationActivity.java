@@ -5,7 +5,9 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Environment;
+import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Base64;
@@ -34,6 +36,7 @@ import clarifai2.api.ClarifaiBuilder;
 import clarifai2.api.ClarifaiClient;
 import clarifai2.api.ClarifaiResponse;
 import clarifai2.dto.input.ClarifaiInput;
+import clarifai2.dto.input.image.ClarifaiFileImage;
 import clarifai2.dto.input.image.ClarifaiImage;
 import clarifai2.dto.model.output.ClarifaiOutput;
 import clarifai2.dto.prediction.Concept;
@@ -59,6 +62,8 @@ public class ImageClassificationActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // not best practice; should set up asynchronous task on api call
+        StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder().permitAll().build());
         Bitmap photoImage;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_image_classification);
@@ -73,7 +78,7 @@ public class ImageClassificationActivity extends AppCompatActivity {
         if (photoImage != null) {
             image.setImageBitmap(photoImage);
         } else {
-            image.setImageResource(R.drawable.bonsai1);
+            image.setImageResource(R.drawable.nichols);
         }
     }
 
@@ -81,7 +86,7 @@ public class ImageClassificationActivity extends AppCompatActivity {
         final ClarifaiClient client = new ClarifaiBuilder("gkRbcRqTrqFxXIWg8oWqZf8FpnkHLXw81V_skWzY", "TsqyYSMhocLidZ1s-Q-wtFVmWEnP4PAt8p9O1iSI")
                 .client(new OkHttpClient()).buildSync();
 
-        Bitmap bm = BitmapFactory.decodeResource(getResources(), R.drawable.bonsai1);
+        Bitmap bm = BitmapFactory.decodeResource(getResources(), R.drawable.nichols);
 
         File dir = new File(Environment.getExternalStorageDirectory() + File.separator + "drawable");
         boolean doSave = true;
@@ -90,15 +95,18 @@ public class ImageClassificationActivity extends AppCompatActivity {
         }
 
         if (doSave) {
-            saveBitmapToFile(dir,"bonsai.png",bm,Bitmap.CompressFormat.PNG,100);
+            saveBitmapToFile(dir,"nichols.png",bm,Bitmap.CompressFormat.PNG,100);
         }
         else {
             Log.e("app","Couldn't create target directory.");
         }
 
         try {
+            File file = new File(dir, "nichols.png");
+            ClarifaiFileImage img = ClarifaiImage.of(file);
+            ClarifaiInput input = ClarifaiInput.forImage(img);
             ClarifaiResponse response = client.getDefaultModels().generalModel().predict()
-                    .withInputs(ClarifaiInput.forImage(ClarifaiImage.of(new File(dir, "bonsai.png"))))
+                    .withInputs(input)
                     .executeSync();
 
             List<ClarifaiOutput<Concept>> predictions = (List<ClarifaiOutput<Concept>>) response.get();
