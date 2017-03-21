@@ -21,6 +21,6 @@
 > <a href="https://github.com/datarocksAmy/BigDataProject/blob/master/Project%20Report%202/CS%205542%20Team%20%232%20Report%202.pdf"> Documentation </a>
 
 ### Code Source:
-> <a href="https://github.com/datarocksAmy/BigDataProject/tree/master/Source"> Source </a>
+> <a href="https://github.com/datarocksAmy/BigDataProject/tree/master/Source"> Main Source </a>
 
-> Code: <a href="https://github.com/datarocksAmy/BigDataProject/tree/master/Source/TensorFlow"> Tensorflow + Softmax </a>
+> <a href="https://github.com/datarocksAmy/BigDataProject/tree/master/Source/TensorFlow"> Tensorflow + Softmax Source</a>
