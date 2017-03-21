@@ -23,4 +23,4 @@
 ### Code Source:
 > <a href="https://github.com/datarocksAmy/BigDataProject/tree/master/Source"> Source </a>
 
-> <a href="https://github.com/datarocksAmy/BigDataProject/tree/master/Source/TensorFlow"> Tensorflow + Softmax </a>
+> Code: <a href="https://github.com/datarocksAmy/BigDataProject/tree/master/Source/TensorFlow"> Tensorflow + Softmax </a>
