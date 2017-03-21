@@ -16,7 +16,6 @@
 
 
 ### > Project Report 2
-> Documentation:
 > <a href="https://github.com/datarocksAmy/BigDataProject/blob/master/Project%20Report%202/CS%205542%20Team%20%232%20Report%202.pdf"> Documentation </a>
 
 ### Code Source:
