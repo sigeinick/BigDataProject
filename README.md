@@ -15,5 +15,12 @@
 > <a href="https://www.dropbox.com/sh/tsxmoym5hiwy8t4/AACv5m80d5OiKLx4HM3V0vkTa?dl=0"> Link </a>
 
 
+
+### > Project Report 2
+> Documentation:
+> <a href="https://github.com/datarocksAmy/BigDataProject/blob/master/Project%20Report%202/CS%205542%20Team%20%232%20Report%202.pdf"> Documentation </a>
+
 ### Code Source:
 > <a href="https://github.com/datarocksAmy/BigDataProject/tree/master/Source"> Source </a>
+
+> <a href="https://github.com/datarocksAmy/BigDataProject/tree/master/Source/TensorFlow"> Tensorflow + Softmax </a>
