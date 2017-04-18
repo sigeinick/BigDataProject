@@ -2,10 +2,10 @@
 ## Kansas City Fountain Monument Identifier 
 
 ### > Proposal
-> <a href="https://github.com/datarocksAmy/BigDataProject/blob/master/Project%20Proposal/CS%205542%20Team%20%232%20Proposal%20.pdf"> Documentation </a>
+> <a href="https://github.com/datarocksAmy/BigDataProject/blob/master/Reports/Project%20Proposal/CS%205542%20Team%20%232%20Proposal%20.pdf"> Documentation </a>
 
 ### > Project Report 1
-> <a href="https://github.com/datarocksAmy/BigDataProject/blob/master/Project%20Report%201/Documentation/CS%205542%20Team%20%232%20Report%201.pdf"> Documentation </a>
+> <a href="https://github.com/datarocksAmy/BigDataProject/tree/master/Reports/Project%20Report%201/Documentation"> Documentation </a>
 
 > Wiki links to screenshots:
 <a href="https://github.com/datarocksAmy/BigDataProject/wiki/Iteration-1">Iteration 1</a>
@@ -16,7 +16,7 @@
 
 
 ### > Project Report 2
-> <a href="https://github.com/datarocksAmy/BigDataProject/blob/master/Project%20Report%202/CS%205542%20Team%20%232%20Report%202.pdf"> Documentation </a>
+> <a href="https://github.com/datarocksAmy/BigDataProject/blob/master/Reports/Project%20Report%202/CS%205542%20Team%20%232%20Report%202.pdf"> Documentation </a>
 
 >Wiki links to screenshots:
 <a href="https://github.com/datarocksAmy/BigDataProject/wiki/Iteration-2">Iteration 2</a>
