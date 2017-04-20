@@ -25,7 +25,7 @@ Three different approaches are applied to this project - Clarafai API, Spark, Te
 > Wiki links to screenshots:
 <a href="https://github.com/datarocksAmy/BigDataProject/wiki/Iteration-2">Iteration 2</a>
 
-> ### Code Source:
+### Code Source:
 > <a href="https://github.com/datarocksAmy/BigDataProject/tree/master/Source"> Main Source</a>
 
 > <a href="https://github.com/datarocksAmy/BigDataProject/tree/master/Source/TensorFlow"> Tensorflow + Softmax</a>
