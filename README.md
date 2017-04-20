@@ -8,7 +8,7 @@ Three different approaches are applied to this project - Clarafai API, Spark, Te
 
 
 ## Proposal
-> <a href="https://github.com/datarocksAmy/BigDataProject/blob/master/Reports/Project%20Proposal/CS%205542%20Team%20%232%20Proposal%20.pdf"> Documentation </a>
+> Documentation of the proposal can be found <a href="https://github.com/datarocksAmy/BigDataProject/blob/master/Reports/Project%20Proposal/CS%205542%20Team%20%232%20Proposal%20.pdf"> here. </a>
 
 ## Project Report 1
 > <a href="https://github.com/datarocksAmy/BigDataProject/tree/master/Reports/Project%20Report%201/Documentation"> Documentation </a>
