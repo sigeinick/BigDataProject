@@ -1,6 +1,8 @@
-# [ CS 5542 Big Data Project -- Team #2 AJNN ]
+# CS 5542 Big Data Project -- Team #2 AJNN 
 # Kansas City Fountain Monument Identifier 
-# Overview
+
+
+## Overview
 
 Using three fountains (Children's Fountain, J.C. Nichols Memorial Fountain, The Muse of Missouri) in Kansas City as out datasets to create an app to predict and identify which Fountain mounument it is.
 
