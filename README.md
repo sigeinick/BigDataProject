@@ -7,10 +7,10 @@ Using three fountains (Children's Fountain, J.C. Nichols Memorial Fountain, The 
 Three different approaches are applied to this project - Clarafai API, Spark, Tensorflow.
 
 
-### Proposal
+## Proposal
 > <a href="https://github.com/datarocksAmy/BigDataProject/blob/master/Reports/Project%20Proposal/CS%205542%20Team%20%232%20Proposal%20.pdf"> Documentation </a>
 
-### Project Report 1
+## Project Report 1
 > <a href="https://github.com/datarocksAmy/BigDataProject/tree/master/Reports/Project%20Report%201/Documentation"> Documentation </a>
 
 > Wiki links to screenshots:
@@ -21,15 +21,15 @@ Three different approaches are applied to this project - Clarafai API, Spark, Te
 
 
 
-### Project Report 2
+## Project Report 2
 > <a href="https://github.com/datarocksAmy/BigDataProject/blob/master/Reports/Project%20Report%202/CS%205542%20Team%20%232%20Report%202.pdf"> Documentation </a>
 
 >Wiki links to screenshots:
 <a href="https://github.com/datarocksAmy/BigDataProject/wiki/Iteration-2">Iteration 2</a>
 
-## Code Source:
+### Code Source:
 > <a href="https://github.com/datarocksAmy/BigDataProject/tree/master/Source"> Main Source </a>
 
 > <a href="https://github.com/datarocksAmy/BigDataProject/tree/master/Source/TensorFlow"> Tensorflow + Softmax Source</a>
 
-### Project Report 3
+## Project Report 3
