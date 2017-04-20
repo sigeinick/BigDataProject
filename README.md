@@ -1,6 +1,4 @@
-# CS 5542 Big Data Project -- Team #2 AJNN 
-# Kansas City Fountain Monument Identifier 
-
+# CS 5542 Big Data Project Team #2 AJNN -- Kansas City Fountain Monument Identifier 
 
 ## Overview
 
@@ -16,7 +14,7 @@ Three different approaches are applied to this project - Clarafai API, Spark, Te
 ## Project Report 1
 > Documentation of report 1 can be found <a href="https://github.com/datarocksAmy/BigDataProject/tree/master/Reports/Project%20Report%201/Documentation"> here. </a>
 
-> Wiki links to screenshots:
+> Wiki links to screenshots ->
 <a href="https://github.com/datarocksAmy/BigDataProject/wiki/Iteration-1">Iteration 1</a>
 
 
@@ -24,10 +22,10 @@ Three different approaches are applied to this project - Clarafai API, Spark, Te
 > <a href="https://github.com/datarocksAmy/BigDataProject/blob/master/Reports/Project%20Report%202/CS%205542%20Team%20%232%20Report%202.pdf"> Documentation </a>
 
 
-> Wiki links to screenshots:
+> Wiki links to screenshots ->
 <a href="https://github.com/datarocksAmy/BigDataProject/wiki/Iteration-2">Iteration 2</a>
 
-### Code Source:
+> ### Code Source:
 > <a href="https://github.com/datarocksAmy/BigDataProject/tree/master/Source"> Main Source</a>
 
 > <a href="https://github.com/datarocksAmy/BigDataProject/tree/master/Source/TensorFlow"> Tensorflow + Softmax</a>
