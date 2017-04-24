@@ -20,7 +20,7 @@ Three different approaches are applied to this project - Clarafai API, Spark, Te
 
 
 ## Project Report 2
-> <a href="https://github.com/datarocksAmy/BigDataProject/blob/master/Reports/Project%20Report%202/CS%205542%20Team%20%232%20Report%202.pdf"> Documentation </a>
+>  Documentation of report 2 is <a href="https://github.com/datarocksAmy/BigDataProject/blob/master/Reports/Project%20Report%202/CS%205542%20Team%20%232%20Report%202.pdf"> here. </a>
 
 
 > Wiki links to screenshots ->
