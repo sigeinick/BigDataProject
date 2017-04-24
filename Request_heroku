@@ -1,0 +1,39 @@
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    //sending request to heroku
+    public void onClick(View view) {
+
+        // Set up the network to use http url
+        Network network = new BasicNetwork(new HurlStack());
+
+        // Instantiate the Request with network.
+        myRequest = new RequestQueue(network);
+
+        // Start the request
+        myRequestQ.start();
+
+        String url = "https://dashboard.heroku.com/apps/qnqa";
+
+        // Processing  the response.
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>()
+        {
+                    @Override
+                    public void onResponse(String response) {
+                   //response
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(error)
+
+                });
+
+        // Add the request to the RequestQueue.
+        myRequest.add(stringRequest);
+        ask.makeText(getBaseContext(), "Request allowed ", ask.LENGTH_SHORT).show();
+    }
+
+    ;
+
+}
